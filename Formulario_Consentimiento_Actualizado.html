@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Consentimiento Informado</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            line-height: 1.6;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        h1, h2 {
+            color: #0056b3;
+        }
+        form {
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        input[type="text"], input[type="date"], textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        input[type="checkbox"] {
+            margin-right: 10px;
+        }
+        button {
+            background-color: #0056b3;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #003d82;
+        }
+        section {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Formulario de Consentimiento Informado</h1>
+    <form action="/submit-consent" method="POST">
+        <section>
+            <h2>1. Información del Paciente</h2>
+            <label for="nombre">Nombre completo:</label>
+            <input type="text" id="nombre" name="nombre" required>
+
+            <label for="fecha">Fecha:</label>
+            <input type="date" id="fecha" name="fecha" required>
+        </section>
+
+        <section>
+            <h2>2. ¿Qué es el ácido hialurónico y para qué sirve?</h2>
+            <p>
+                El ácido hialurónico es una sustancia natural presente en el organismo, responsable de mantener la hidratación y elasticidad de la piel.
+                En tratamientos estéticos, se utiliza para:
+            </p>
+            <ul>
+                <li>Rellenar arrugas y líneas de expresión.</li>
+                <li>Aumentar el volumen en áreas como labios y pómulos.</li>
+                <li>Mejorar la hidratación y textura de la piel.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>3. Cómo es el procedimiento</h2>
+            <p>El tratamiento se realiza en los siguientes pasos:</p>
+            <ol>
+                <li>Limpieza de la zona a tratar.</li>
+                <li>Aplicación de anestesia tópica si es necesario.</li>
+                <li>Introducción del ácido hialurónico mediante una jeringa o el Hyaluron Pen.</li>
+                <li>Masaje suave para distribuir el producto uniformemente.</li>
+            </ol>
+            <p>La duración del procedimiento es de 20 a 40 minutos aproximadamente.</p>
+        </section>
+
+        <section>
+            <h2>4. Beneficios del tratamiento</h2>
+            <ul>
+                <li>Mejora inmediata de la apariencia de la piel.</li>
+                <li>Resultados naturales y progresivos.</li>
+                <li>Procedimiento mínimamente invasivo.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>5. Riesgos y posibles efectos secundarios</h2>
+            <p>Como todo procedimiento estético, existen riesgos, que incluyen:</p>
+            <ul>
+                <li>Enrojecimiento o inflamación en el área tratada.</li>
+                <li>Aparición de moretones o sensibilidad.</li>
+                <li>Reacciones alérgicas (muy raras).</li>
+                <li>Resultados asimétricos o insatisfactorios, que podrían requerir corrección.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>6. Declaración de Salud</h2>
+            <p>Por favor, marque las siguientes casillas para confirmar:</p>
+            <label><input type="checkbox" name="salud" required>No padezco ninguna enfermedad que contraindique este procedimiento.</label><br>
+            <label><input type="checkbox" name="embarazo" required>No estoy embarazada ni en periodo de lactancia.</label><br>
+            <label><input type="checkbox" name="alergias" required>He informado sobre alergias o tratamientos médicos actuales.</label>
+        </section>
+
+        <section>
+            <h2>7. Consentimiento</h2>
+            <p>Confirmo que he recibido información completa sobre el tratamiento y autorizo al profesional a proceder.</p>
+            <label><input type="checkbox" name="consentimiento" required>Doy mi consentimiento para el procedimiento.</label>
+        </section>
+
+        <section>
+            <h2>8. Firma</h2>
+            <label for="firma">Firma (escriba su nombre):</label>
+            <input type="text" id="firma" name="firma" required>
+        </section>
+
+        <button type="submit">Enviar</button>
+    </form>
+</body>
+</html>
